@@ -1,44 +1,20 @@
 <?php
-session_start();
-require "database/connection.php";
+// actions/register.php
+require_once __DIR__ . '/../config/db.php';
 
-$naam= $_POST["name"];  
-$email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
-$password = $_POST["password"];
-$confirm_password = $_POST["confirm-password"];
-$telefoonnummer = $_POST["telefoonnummer"] ?? null;
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $email = $_POST['email'];
+    $password = password_hash($_POST['password'], PASSWORD_ARGON2ID); // Of PASSWORD_BCRYPT
 
-
-
-
-if ($password === $confirm_password) {
-    $check_account = $conn->prepare("SELECT * FROM user WHERE email = :email");
-    $check_account->bindParam(":email", $email);
-    $check_account->execute();
-
-
-    if ($check_account->rowCount() === 0) {
-        //Extra hoge cost om nog beter te beveiligen
-        $options = ['cost' => 14];
-        $encrypted_password = password_hash($password, PASSWORD_DEFAULT, $options);
-
-        $create_account = $conn->prepare("INSERT INTO user (email, password) VALUES (:email, :password)");
-        $create_account->bindParam(":email", $email);
-        $create_account->bindParam(":password", $encrypted_password);
-        $create_account->execute();
-
-        $_SESSION["success"] = "Registratie is gelukt, log nu in:";
-        header("Location: /login-form");
-        exit();
-    } else {
-        $_SESSION["message"] = "Dit e-mailadres is al in gebruik.";
-        $_SESSION["email"] = htmlspecialchars($email);
-        header("Location: /register-form");
-        exit();
+    try {
+        $stmt = $pdo->prepare("INSERT INTO account (email, password) VALUES (?, ?)");
+        $stmt->execute([$email, $password]);
+        header("Location: /login");
+    } catch (PDOException $e) {
+        if ($e->getCode() == 23000) { // Duplicate entry voor email
+            echo "Dit e-mailadres is al in gebruik.";
+        } else {
+            echo "Er ging iets mis.";
+        }
     }
-} else {
-    $_SESSION["message"] = "Wachtwoorden komen niet overeen.";
-    $_SESSION["email"] = htmlspecialchars($email);
-    header("Location: register-form.php");
-    exit();
 }
