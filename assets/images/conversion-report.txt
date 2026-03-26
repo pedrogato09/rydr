@@ -1,0 +1,39 @@
+PNG to WebP Conversion Report
+Generated: 26-3-2026, 12:57:31
+==================================================
+
+File: car-rent-header-image-1.webp
+Size: 47.13 KB → 36.92 KB (22% saved)
+
+File: car-rent-header-image-2.webp
+Size: 41 KB → 32.82 KB (20% saved)
+
+File: favicon.webp
+Size: 987.32 KB → 931.28 KB (6% saved)
+
+File: header-circle-background.webp
+Size: 18.83 KB → 10.98 KB (42% saved)
+
+File: hoofdvestiging.webp
+Size: 2.49 MB → 2.14 MB (14% saved)
+
+File: logo.webp
+Size: 1.29 MB → 295.17 KB (78% saved)
+
+File: Profil.webp
+Size: 4.37 KB → 3.78 KB (14% saved)
+
+File: work-place.webp
+Size: 2.34 MB → 1.96 MB (16% saved)
+
+==================================================
+TOTAL SUMMARY
+==================================================
+Files converted: 8
+Original size: 7.2 MB
+Converted size: 5.39 MB
+Total saved: 1.81 MB (25%)
+==================================================
+
+Converted with ConvertICO.COM
+https://convertico.com/png-to-webp/
