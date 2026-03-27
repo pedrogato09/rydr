@@ -51,7 +51,6 @@
 <?php require "includes/header.php"; ?>
 <?php require "database/connection.php"; ?>
 
-
 <?php
 $stmt = $conn->prepare("SELECT * FROM Car");
 $stmt->execute();
@@ -93,12 +92,20 @@ $cars = $stmt->fetchAll();
 
             <img src="assets/images/products/<?php echo $car['image']; ?>" alt="">
 
-            <div class="car-specification">
-                <span>
-                    <img src="assets/images/icons/profile-2user.svg" alt="">
-                    <?php echo $car['aantal_personen']; ?> Personen
-                </span>
-            </div>
+           <div class="car-specification">
+    <span>
+        <img src="assets/images/icons/gas-station.webp" alt="">
+        90L
+    </span>
+    <span>
+        <img src="assets/images/icons/car.webp" alt="">
+        Manual
+    </span>
+    <span>
+        <img src="assets/images/icons/profile-2user.webp" alt="">
+        <?php echo $car['aantal_personen']; ?> Personen
+    </span>
+</div>
 
             <div class="rent-details">
                 <span>
