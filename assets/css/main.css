@@ -419,7 +419,10 @@ footer .footer-links .links ul a {
 .cars {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
-  gap: 20px;
+  gap: 50px;
+  padding: 40px 0;
+  margin: auto;
+  
 }
 .cars .car-details {
   display: flex;
@@ -435,7 +438,7 @@ footer .footer-links .links ul a {
   color: #90A3BF;
 }
 .cars img {
-  max-height: 87px;
+  max-height: 120px;
 }
 .cars .car-specification {
   display: flex;
