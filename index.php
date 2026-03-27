@@ -21,6 +21,7 @@ if ($path === 'register-handler') {
 }
 
 $page = $path ?: 'home';
+$page = basename($page); // Voorkomt ../ navigatie
 $file = __DIR__ . '/pages/' . $page . '.php';
 
 if (file_exists($file)) {
@@ -29,3 +30,4 @@ if (file_exists($file)) {
     http_response_code(404);
     include __DIR__ . '/pages/404.php';
 }
+

@@ -58,7 +58,7 @@ $cars = $stmt->fetchAll();
                 </span>
 
                 <!-- BELANGRIJKE LINK -->
-                <a href="car-detail.php?id=<?php echo $car['car_id']; ?>" class="button-primary">
+                <a href="car-detail?id=<?php echo $car['car_id']; ?>" class="button-primary">
                     Bekijk nu
                 </a>
             </div>
@@ -70,3 +70,4 @@ $cars = $stmt->fetchAll();
 </main>
 
 <?php require "includes/footer.php"; ?>
+
