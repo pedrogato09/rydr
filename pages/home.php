@@ -12,8 +12,8 @@ $cars = $stmt->fetchAll();
         <div class="advertorial">
             <h2>Hét platform om een auto te huren</h2>
             <p>Snel en eenvoudig een auto huren. Natuurlijk voor een lage prijs.</p>
-            <a href="#" class="button-primary">Huur nu een auto</a>
-            <img src="assets/images/car-rent-header-image-1.webp" alt="">
+<a href="register-form" class="button-primary">Huur nu een auto</a>         
+   <img src="assets/images/car-rent-header-image-1.webp" alt="">
         </div>
 
         <div class="advertorial">
@@ -47,6 +47,7 @@ $cars = $stmt->fetchAll();
         <img src="assets/images/icons/gas-station.webp" alt="">
         90L
     </span>
+    
     <span>
         <img src="assets/images/icons/car.webp" alt="">
         Manual
@@ -72,7 +73,8 @@ $cars = $stmt->fetchAll();
 
         </div>
     <?php endforeach; ?>
-</div>
+     <div class="show-more">
+<a href="ons-aanbod" class="button-primary">Toon alle</a></div>
 
 </main>
 

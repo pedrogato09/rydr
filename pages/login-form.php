@@ -5,6 +5,8 @@
         <?php if (isset($_SESSION['success'])) { ?>
             <div class="succes-message"><?= $_SESSION['success'] ?></div>
         <?php } ?>
+        <label for="name">Uw naam</label>
+        <input type="text" name="name" id="name" placeholder="John Doe" value="<?= isset($_SESSION['name']) ? htmlspecialchars($_SESSION['name']) : '' ?>" required>
         <label for="email">Uw e-mail</label>
         <input type="email" name="email" id="email" placeholder="johndoe@gmail.com" value="<?= isset($_SESSION['email']) ? htmlspecialchars($_SESSION['email']) : '' ?>" required autofocus>
         <label for="password">Uw wachtwoord</label>

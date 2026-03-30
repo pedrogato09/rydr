@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #F6F7F9;
+  background-color: hsl(220, 30%, 96%);
   margin: 0;
 }
 
@@ -422,7 +422,7 @@ footer .footer-links .links ul a {
   gap: 50px;
   padding: 40px 0;
   margin: auto;
-  
+
 }
 .cars .car-details {
   display: flex;

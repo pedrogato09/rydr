@@ -39,7 +39,9 @@ if ($path === 'register-handler') {
 }
 
 $page = $path ?: 'home';
+// echo $page;
 $file = __DIR__ . '/pages/' . $page . '.php';
+// echo $file;
 
 if (file_exists($file)) {
     include $file;

@@ -35,7 +35,7 @@ if (!$car) {
         </div>
 
         <div class="row white-background">
-            <h2><?php echo $car['brand'] . " " . $car['model']; ?></h2>
+            <h3><?php echo $car['brand'] . " " . $car['model']; ?></h3>
 
             <div class="rating">
                 <span class="stars stars-4"></span>
