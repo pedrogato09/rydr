@@ -21,8 +21,13 @@ if ($path === 'register-handler') {
 }
 
 $page = $path ?: 'home';
+<<<<<<< HEAD
 $page = basename($page); // Voorkomt ../ navigatie
+=======
+// echo $page;
+>>>>>>> origin/main
 $file = __DIR__ . '/pages/' . $page . '.php';
+// echo $file;
 
 if (file_exists($file)) {
     include $file;

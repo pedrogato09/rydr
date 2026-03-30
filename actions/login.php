@@ -2,9 +2,10 @@
 // actions/login.php
 require_once __DIR__ . '/../config/db.php';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $email = $_POST['email'] ?? '';
-    $password = $_POST['password'] ?? '';
+$select_user = $conn->prepare("SELECT * FROM account WHERE email = :email");
+$select_user->bindParam(":email", $_POST['email']);
+$select_user->execute();
+$user = $select_user->fetch(PDO::FETCH_ASSOC);
 
     // Gebruik een Prepared Statement om SQL-injectie te voorkomen
     $stmt = $pdo->prepare("SELECT * FROM account WHERE email = ?");
