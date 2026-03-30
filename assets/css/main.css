@@ -430,6 +430,7 @@ footer .footer-links .links ul a {
   background-color: white;
   padding: 24px;
   gap: 24px;
+  border-radius: 10px;
 }
 .cars .car-details h3 {
   margin: 0;
@@ -498,10 +499,66 @@ footer .footer-links .links ul a {
     background: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    flex: 1;
-    max-width: 500px;
 }
+
+.filter-section {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 24px;
+  padding: 16px;
+}
+
+.sidebar {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 14px rgba(0,0,0,.1);
+  position: sticky;
+  top: 16px;
+  height: fit-content;
+  align-self: start;
+  border: 1px solid #e8ebf2;
+}
+
+.cars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  gap: 20px;
+  margin-top: 0;
+}
+
+.sidebar form h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #90A3BF;
+}
+
+.sidebar label,
+.sidebar select,
+.sidebar input[type="range"] {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.sidebar select,
+.sidebar input[type="range"],
+.sidebar button,
+.sidebar .button-primary {
+  width: 100%;
+}
+
+.cars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  gap: 20px;
+  margin-top: 0;
+}
+
+.cars .car-details {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.08);
+}
+
 
 .radio-group {
     margin-bottom: 15px;
