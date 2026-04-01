@@ -1,3 +1,7 @@
+
+
+
+
 <?php require "includes/header.php"; ?>
 <?php require "database/connection.php"; ?>
 
@@ -24,6 +28,55 @@ $cars = $stmt->fetchAll();
         </div>
     </div>
 </header>
+
+<div class="filter-container">
+    <div class="filter-card">
+        <div class="radio-group">
+            <input type="radio" checked> <label>Pick – Up</label>
+        </div>
+        <div class="inputs-row">
+            <div class="input-group">
+                <label>Locations</label>
+                <select><option>Select your city</option></select>
+            </div>
+            <div class="input-group">
+                <label>Date</label>
+                <input type="date" placeholder="Select your date">
+            </div>
+            <div class="input-group">
+                <label>Time</label>
+                <input type="time" placeholder="Select your time">
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="swap-button">
+        <i class="fas fa-arrows-alt-v"></i> </div>
+
+    <div class="filter-card">
+        <div class="radio-group">
+            <input type="radio" checked> <label>Drop – Off</label>
+        </div>
+        <div class="inputs-row">
+            <div class="input-group">
+                <label>Locations</label>
+                <select><option>Select your city</option></select>
+            </div>
+            <div class="input-group">
+                <label>Date</label>
+                <input type="date" placeholder="Select your date">
+            </div>
+            <div class="input-group">
+                <label>Time</label>
+                <input type="time" placeholder="Select your time">
+            </div>
+        </div>
+    </div>
+    
+  
+</div>
+
 
 <main>
 
@@ -79,3 +132,4 @@ $cars = $stmt->fetchAll();
 </main>
 
 <?php require "includes/footer.php"; ?>
+

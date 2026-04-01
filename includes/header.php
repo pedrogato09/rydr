@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap%22 rel="stylesheet">
+
 </head>
 <body>
 <div class="topbar">
@@ -20,8 +22,8 @@
             Rydr.
         </a>
     </div>
-    <form action="">
-        <input type="search" name="" id="" placeholder="Welke auto wilt u huren?">
+    <form action="/ons-aanbod" method="GET">
+        <input type="search" name="search" id="" placeholder="Welke auto wilt u huren?">
         <img src="assets/images/icons/search-normal.svg" alt="" class="search-icon">
     </form>
     <nav>
@@ -46,6 +48,15 @@
             <a href="" class="button-primary">Start met huren</a>
         <?php } ?>
 
+
     </div>
 </div>
 <div class="content">
+
+ 
+    </div>
+</div>
+<div class="content">
+ 
+ 
+

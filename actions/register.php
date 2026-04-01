@@ -1,20 +1,28 @@
 <?php
-session_start();
-require "database/connection.php";
+// actions/register.php
+require_once __DIR__ . '/../config/db.php';
 
+$naam= $_POST["name"];  
 $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
 $password = $_POST["password"];
 $confirm_password = $_POST["confirm-password"];
+$telefoonnummer = $_POST["telefoonnummer"] ?? null;
+
+
+
 
 if ($password === $confirm_password) {
     $check_account = $conn->prepare("SELECT * FROM user WHERE email = :email");
     $check_account->bindParam(":email", $email);
     $check_account->execute();
 
-    if ($check_account->rowCount() === 0) {
-        $encrypted_password = password_hash($password, PASSWORD_DEFAULT, );
 
-        $create_account = $conn->prepare("INSERT INTO user ( email, password) VALUES (:email, :password)");
+    if ($check_account->rowCount() === 0) {
+        //Extra hoge cost om nog beter te beveiligen
+        $options = ['cost' => 14];
+        $encrypted_password = password_hash($password, PASSWORD_DEFAULT, $options);
+
+        $create_account = $conn->prepare("INSERT INTO user (email, password) VALUES (:email, :password)");
         $create_account->bindParam(":email", $email);
         $create_account->bindParam(":password", $encrypted_password);
         $create_account->execute();
@@ -33,8 +41,4 @@ if ($password === $confirm_password) {
     $_SESSION["email"] = htmlspecialchars($email);
     header("Location: register-form.php");
     exit();
-
-
-
 }
-
