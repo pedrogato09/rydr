@@ -22,8 +22,8 @@
             Rydr.
         </a>
     </div>
-    <form action="">
-        <input type="search" name="" id="" placeholder="Welke auto wilt u huren?">
+    <form action="/ons-aanbod" method="GET">
+        <input type="search" name="search" id="" placeholder="Welke auto wilt u huren?">
         <img src="assets/images/icons/search-normal.svg" alt="" class="search-icon">
     </form>
     <nav>

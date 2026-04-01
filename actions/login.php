@@ -21,4 +21,3 @@ $user = $select_user->fetch(PDO::FETCH_ASSOC);
     } else {
         echo "Onjuiste inloggegevens.";
     }
-}
