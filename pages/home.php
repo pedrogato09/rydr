@@ -1,7 +1,3 @@
-
-
-
-
 <?php require "includes/header.php"; ?>
 <?php require "database/connection.php"; ?>
 
@@ -14,16 +10,16 @@ $cars = $stmt->fetchAll();
 <header>
     <div class="advertorials">
         <div class="advertorial">
-            <h2>Hét platform om een auto te huren</h2>
-            <p>Snel en eenvoudig een auto huren. Natuurlijk voor een lage prijs.</p>
-<a href="register-form" class="button-primary">Huur nu een auto</a>         
+            <h2>The Best Platform for Car Rental</h2>
+            <p>Ease of doing a car rental safely and reliably. Of course at low prices.</p>
+<a href="ons-aanbod" class="button-primary">Rental Car</a>         
    <img src="assets/images/car-rent-header-image-1.webp" alt="">
         </div>
 
         <div class="advertorial">
-            <h2>Wij verhuren ook bedrijfswagens</h2>
-            <p>Voor een vaste lage prijs met prettig voordelen.</p>
-            <a href="#" class="button-primary">Huur een bedrijfswagen</a>
+            <h2>Easy way to rent a car at a low price</h2>
+            <p>Providing cheap and reliable car rental services.</p>
+            <a href="ons-aanbod" class="button-primary">Rental Car</a>
             <img src="assets/images/car-rent-header-image-2.webp" alt="">
         </div>
     </div>
@@ -120,14 +116,14 @@ $cars = $stmt->fetchAll();
 
                 <!-- BELANGRIJKE LINK -->
                 <a href="car-detail?id=<?php echo $car['car_id']; ?>" class="button-primary">
-                    Bekijk nu
+                    Rental Now
                 </a>
             </div>
 
         </div>
     <?php endforeach; ?>
      <div class="show-more">
-<a href="ons-aanbod" class="button-primary">Toon alle</a></div>
+<a href="ons-aanbod" class="button-primary">Show More</a></div>
 
 </main>
 
