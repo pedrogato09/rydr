@@ -31,7 +31,7 @@
     <!-- TEAM -->
     <section class="team" id="Het-team">
         <div class="container">
-            <h2>Ons team</h2>
+            <h2>Our team</h2>
 
             <div class="team-grid">
                 <div class="card">

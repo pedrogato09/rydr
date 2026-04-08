@@ -788,7 +788,13 @@ footer .footer-links .links ul a {
   background: white;
   padding: 25px;
   border-radius: 10px;
-  height:   fit-content;
+}
+.reserve-box input {
+  width: 100%;
+  background-color: #ecf2ef;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .reserve-box h2 {
@@ -813,6 +819,7 @@ footer .footer-links .links ul a {
 
 .payment-option {
   border: 1px solid #ddd;
+  background-color: white;
   padding: 10px;
   border-radius: 8px;
   margin-bottom: 10px;

@@ -39,10 +39,10 @@ if (!$car) {
 
             <div class="rating">
                 <span class="stars stars-4"></span>
-                <span>Reviews</span>
+                <span> 440+ Reviews</span>
             </div>
 
-            <p>Deze auto is beschikbaar voor verhuur.</p>
+            <p>This car is perfect for comfort and speed.</p>
 
             <div class="car-type">
                 <div class="grid">
@@ -67,7 +67,8 @@ if (!$car) {
 
                     <div class="row">
                         <span class="accent-color">Gasoline</span>
-                        <span>-</span>
+                        <span><?php echo $car['gasoline']; ?></span>
+    
                     </div>
                 </div>
 
@@ -79,8 +80,9 @@ if (!$car) {
                     </div>
 
                     <div class="row">
-                        <a href="#" class="button-primary">Huur nu</a>
-                    </div>
+<a href="reserve?id=<?php echo $car['car_id']; ?>" class="button-primary">
+    Reserve Now
+</a>                    </div>
                 </div>
 
             </div>

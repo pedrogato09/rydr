@@ -94,7 +94,8 @@ $user_id = $_SESSION['user_id'];
             <div class="form-grid">
                 <input type="text" placeholder="Name">
                 <input type="text" placeholder="Phone">
-                <input type="text" placeholder="Address" class="full-width">
+                <input type="text" placeholder="Address">
+                <input type ="text"placeholder="Town/City">
             </div>
         </div>
 
