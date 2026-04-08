@@ -53,10 +53,20 @@
         <div class="modal-actions">
             <a href="/login-form" class="button-secondary">Inloggen</a>
             <a href="/register-form" class="button-primary">Account aanmaken</a>
+            <a href="/admin-login" class="button-secondary">Admin login</a>
         </div>
-        <button class="modal-close">&times;</button>
+        <button class="modal-close" aria-label="Modal sluiten">&times;</button>
     </div>
 </div>
-<script src="assets/javascript/main.js"></script>
+
+<?php
+// Toon error message als deze bestaat
+if (isset($_SESSION['error'])) {
+    echo '<div class="alert alert-error">' . htmlspecialchars($_SESSION['error'], ENT_QUOTES, 'UTF-8') . '</div>';
+    unset($_SESSION['error']);
+}
+?>
+
+<script src="/assets/javascript/main.js" defer></script>
 </body>
 </html>
